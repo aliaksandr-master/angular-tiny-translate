@@ -1,0 +1,27 @@
+{
+  "name": "angular-tiny-translate",
+  "version": "1.0.0",
+  "description": "small library to translate with current language without any implicit loading and other unused trash. you load only library and attach into your app translations and that is it.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aliaksandr-pasynkau/angular-tiny-translate.git"
+  },
+  "keywords": [
+    "angular",
+    "translate",
+    "tiny",
+    "locale",
+    "localization",
+    "translations",
+    "en",
+    "vocabulary",
+    "multilang",
+    "multilanguage"
+  ],
+  "author": "alxe_master",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aliaksandr-pasynkau/angular-tiny-translate/issues"
+  },
+  "homepage": "https://github.com/aliaksandr-pasynkau/angular-tiny-translate#readme"
+}
