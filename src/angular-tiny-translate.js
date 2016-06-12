@@ -8,3 +8,5 @@ angular
     TrFilter,
     TinyTranslate
   ]);
+
+module.exports = 'angular-tiny-translate';

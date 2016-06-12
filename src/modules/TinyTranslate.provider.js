@@ -6,8 +6,8 @@ angular
   ])
 
   /*@ngInject*/
-  .provider('TinyTranslate', ($log) => {
-    const Translate = {};
+  .provider('TinyTranslate', () => {
+    const TinyTranslate = {};
     const cache = {};
     const translationsDefault = {};
     const DEFAULT_KEY = '*';
@@ -16,7 +16,7 @@ angular
 
 
 
-    const translate = (prefix, id) => {
+    const translate = (prefix, id, emptyHandler = null) => {
       const translationId = `${prefix}.${id}`;
 
       if (cache.hasOwnProperty(translationId)) {
@@ -28,15 +28,9 @@ angular
       if (translationsDefault.hasOwnProperty(prefix)) {
         const _def = translationsDefault[prefix];
 
-        if (angular.isFunction(_def)) {
-          result = _def(id);
-        } else {
-          result = translationsDefault[prefix].replace(DEFAULT_KEY_EXP, id);
-        }
+        result = angular.isFunction(_def) ? _def(id) : translationsDefault[prefix].replace(DEFAULT_KEY_EXP, id);
       } else {
-        $log.error(`invalid translation ID ${translationId}`);
-
-        result = '';
+        result = angular.isFunction(emptyHandler) ? emptyHandler(prefix, id) : '';
       }
 
       cache[translationId] = result;
@@ -44,13 +38,13 @@ angular
       return result;
     };
 
-    Translate.$get = () => ({ translate });
+    TinyTranslate.$get = () => ({ translate });
 
 
 
 
 
-    Translate.translations = (_translations) => {
+    TinyTranslate.translations = (_translations) => {
       angular.forEach(_translations, (translations, prefix) => {
         if (translations == null || !angular.isObject(translations)) {
           throw new TypeError('invalid translation hash table format');
@@ -70,7 +64,7 @@ angular
       });
     };
 
-    return Translate;
+    return TinyTranslate;
   });
 
 module.exports = 'angular-tiny-translate.provider';
