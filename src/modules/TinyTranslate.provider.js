@@ -73,4 +73,4 @@ angular
     return Translate;
   });
 
-export default 'angular-tiny-translate.provider';
+module.exports = 'angular-tiny-translate.provider';

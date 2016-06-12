@@ -6,6 +6,9 @@
   },
   "globals": {
     "window": true,
+    "module": true,
+    "exports": true,
+    "require": true,
     "angular": true
   },
   "plugins": [

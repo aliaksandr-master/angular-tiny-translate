@@ -1,12 +1,10 @@
 'use strict';
 
-import TinyTranslate from './modules/TinyTranslate.provider';
-import TrFilter from './modules/tr.filter';
+const TinyTranslate = require('./modules/TinyTranslate.provider');
+const TrFilter = require('./modules/tr.filter');
 
 angular
   .module('angular-tiny-translate', [
     TrFilter,
     TinyTranslate
   ]);
-
-export default 'angular-tiny-translate';

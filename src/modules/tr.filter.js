@@ -1,6 +1,6 @@
 'use strict';
 
-import TinyTranslate from './TinyTranslate.provider.js';
+const TinyTranslate = require('./TinyTranslate.provider.js');
 
 angular
   .module('angular-tiny-translate.filter', [
@@ -13,4 +13,4 @@ angular
       TinyTranslates.translate(keyPrefix, translationId)
   );
 
-export default 'angular-tiny-translate.filter';
+module.exports = 'angular-tiny-translate.filter';
