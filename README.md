@@ -1,7 +1,7 @@
 [![npm](http://img.shields.io/npm/v/angular-tiny-translate.svg?style=flat-square)](https://www.npmjs.com/package/angular-tiny-translate)
 [![npm](http://img.shields.io/npm/l/angular-tiny-translate.svg?style=flat-square)](http://opensource.org/licenses/MIT)
-[![Dependency Status](https://david-dm.org/aliaksandr-pasynkau/angular-tiny-translate.svg?style=flat-square)](https://david-dm.org/aliaksandr-pasynkau/angular-tiny-translate)
-[![devDependency Status](https://david-dm.org/aliaksandr-pasynkau/angular-tiny-translate/dev-status.svg?style=flat-square)](https://david-dm.org/aliaksandr-pasynkau/angular-tiny-translate#info=devDependencies)
+[![Dependency Status](https://david-dm.org/aliaksandr-master/angular-tiny-translate.svg?style=flat-square)](https://david-dm.org/aliaksandr-master/angular-tiny-translate)
+[![devDependency Status](https://david-dm.org/aliaksandr-master/angular-tiny-translate/dev-status.svg?style=flat-square)](https://david-dm.org/aliaksandr-master/angular-tiny-translate#info=devDependencies)
 
 angular-tiny-translate
 ================

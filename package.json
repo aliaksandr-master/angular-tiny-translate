@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/aliaksandr-pasynkau/angular-tiny-translate.git"
+    "url": "git+https://github.com/aliaksandr-master/angular-tiny-translate.git"
   },
   "keywords": [
     "angular",
@@ -28,9 +28,9 @@
   "author": "alxe_master",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/aliaksandr-pasynkau/angular-tiny-translate/issues"
+    "url": "https://github.com/aliaksandr-master/angular-tiny-translate/issues"
   },
-  "homepage": "https://github.com/aliaksandr-pasynkau/angular-tiny-translate#readme",
+  "homepage": "https://github.com/aliaksandr-master/angular-tiny-translate#readme",
   "devDependencies": {
     "babel-core": "6.9.1",
     "babel-eslint": "6.0.4",
