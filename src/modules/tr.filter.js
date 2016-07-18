@@ -8,13 +8,9 @@ angular
   ])
 
   /*@ngInject*/
-  .filter('tr', (TinyTranslate, $log) =>
+  .filter('tr', (TinyTranslate) =>
     (id, prefix) =>
-      TinyTranslate.translate(prefix, id, (prefix, id) => {
-        $log.error(`invalid translation ID "${prefix}${id}"`);
-
-        return '';
-      })
+      TinyTranslate.translate(prefix, id)
   );
 
 module.exports = 'angular-tiny-translate.filter';

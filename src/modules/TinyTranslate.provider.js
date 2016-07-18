@@ -15,30 +15,40 @@ angular
 
 
 
+    /*@ngInject*/
+    TinyTranslate.$get = ($log) => {
+      const _emptyHandler = (prefix, id) => {
+        $log.error(`invalid translation ID "${prefix}[${id}]"`);
 
-    const translate = (prefix, id, emptyHandler = null) => {
-      const translationId = `${prefix}.${id}`;
+        return '';
+      };
 
-      if (cache.hasOwnProperty(translationId)) {
-        return cache[translationId];
-      }
+      const translate = (prefix, id, emptyHandler = _emptyHandler) => {
+        const translationId = `${prefix}.${id}`;
 
-      let result = null;
+        if (cache.hasOwnProperty(translationId)) {
+          return cache[translationId];
+        }
 
-      if (translationsDefault.hasOwnProperty(prefix)) {
-        const _def = translationsDefault[prefix];
+        let result = null;
 
-        result = angular.isFunction(_def) ? _def(id) : translationsDefault[prefix].replace(DEFAULT_KEY_EXP, id);
-      } else {
-        result = angular.isFunction(emptyHandler) ? emptyHandler(prefix, id) : '';
-      }
+        if (translationsDefault.hasOwnProperty(prefix)) {
+          const _def = translationsDefault[prefix];
 
-      cache[translationId] = result;
+          result = angular.isFunction(_def) ? _def(id) : translationsDefault[prefix].replace(DEFAULT_KEY_EXP, id);
+        } else {
+          result = angular.isFunction(emptyHandler) ? emptyHandler(prefix, id) : '';
+        }
 
-      return result;
+        cache[translationId] = result;
+
+        return result;
+      };
+
+      return {
+        translate
+      };
     };
-
-    TinyTranslate.$get = () => ({ translate });
 
 
 
