@@ -1,6 +1,6 @@
 {
   "name": "angular-tiny-translate",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "small library to translate with current language without any implicit loading and other unused trash. you load only library and attach into your app translations and that is it.",
   "main": "dist/angular-tiny-translate.js",
   "scripts": {
